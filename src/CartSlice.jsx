@@ -28,7 +28,7 @@ export const CartSlice = createSlice({
       if (itemToUpdate) {
         itemToUpdate.quantity = quantity; // If the item is found, update its quantity to the new value
       }
-
+      dispatch(updateQuantity({ name: item.name, quantity: item.quantity + 1 }));
     },
   },
 });
